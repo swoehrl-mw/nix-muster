@@ -6,14 +6,14 @@ This repository contains a very basic [Nix Flake](https://nixos.wiki/wiki/Flakes
 
 To reference this flake use the following format: `github:swoehrl-mw/nix-muster/v<version>`. If you just want the latest version and don't care about version pinning, remove the `/v<version>` part.
 
-Example: `github:swoehrl-mw/nix-muster/v5.63.2`
+Example: `github:swoehrl-mw/nix-muster/v5.63.7`
 
 To use the package with [devbox](https://www.jetify.com/devbox/docs/), simply add the reference to your `devbox.json` `packages`:
 
 ```json
 {
     "packages": [
-        "github:swoehrl-mw/nix-muster/v5.63.2"
+        "github:swoehrl-mw/nix-muster/v5.63.7"
     ]
 }
 ```
@@ -23,7 +23,7 @@ To add the package to a classic [nix-shell](https://nix.dev/tutorials/first-step
 ```nix
 pkgs.mkShellNoCC {
   packages = [
-    (builtins.getFlake "github:swoehrl-mw/nix-muster/v5.63.2").packages.${builtins.currentSystem}.muster
+    (builtins.getFlake "github:swoehrl-mw/nix-muster/v5.63.7").packages.${builtins.currentSystem}.muster
   ];
 }
 ```
