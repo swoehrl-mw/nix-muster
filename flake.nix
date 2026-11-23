@@ -17,7 +17,7 @@
       packages = forAllSystems (system:
         let 
           pkgs = nixpkgsFor.${system};
-          pkg_version = "5.64.4";
+          pkg_version = "5.65.0";
           # Map nix system names to download names for muster releases
           name_mapping = {
             "x86_64-linux" = "linux-amd64";
@@ -27,10 +27,10 @@
           };
           # Hashes for the different architectures, calculated using ./calc_hashes.sh
           source_hashes = {
-            "linux-amd64" = "BGmblrMfF+gtVxIiUdQNzp9ksAbEdl7GCjI8gZ28Rog=";
-            "linux-arm64" = "flaDWNbD0yPD7TuXf3wrvIPLoo2ue0F5aJfNk6LNkec=";
-            "darwin-amd64" = "PaCxTJvEh2jlyMTkyXgpjKPvXp46Ch+TsiuJfNceZxI=";
-            "darwin-arm64" = "fomn7tQZPcpfdeaM7wJS94Wo2gqbd1Keke5IXr2I79A=";
+            "linux-amd64" = "rZNU7fx+NWQBrU7GFaH/qYvCmskUIOJY5yqnNvrLCt0=";
+            "linux-arm64" = "U6RBzRXZ3i3NJNXxzjVeljjYZC8aIQR990mB0tQPqoc=";
+            "darwin-amd64" = "wvMI0LsH/cTy+GJdu3k87Z1EyPUDBmfofH3QayRhcPI=";
+            "darwin-arm64" = "C0rgfUSqBMqmNXP8huITEzfkMvaeCud1ujOkstPPcFc=";
           };
         in rec {
           muster = pkgs.stdenv.mkDerivation rec {
